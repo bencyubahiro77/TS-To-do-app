@@ -1,0 +1,33 @@
+input{
+    height: 30px;
+    width: 40vw;
+    margin-right: 5px;
+}
+button{
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border: none;
+    margin-left: 10px;
+}
+body{
+    width: 90%;
+}
+
+.content{
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: circle;
+}
+li{
+    margin-top: 20px;
+    font-size: 23px;
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+}
