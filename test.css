@@ -33,15 +33,27 @@ body{
 
 ul{
     list-style-type: circle;
+    width: 100%
 }
 li {
     margin-top: 20px;
     font-size: 23px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    text-transform: capitalize;
 }
 
 li button {
     height: 30px;
-    width: 70px; 
+    width: 90px; 
+}
+
+@media(max-width:425px){
+   ul{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: fit-content;
+    overflow-x: scroll;
+   }
 }
