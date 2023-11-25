@@ -23,20 +23,28 @@ function editTodo(index) {
 }
 function renderTodoList() {
     todoList.innerHTML = '';
-    todos.forEach(function (todo, index) {
-        var li = document.createElement('li');
+    todos.forEach((todo, index) => {
+        const li = document.createElement('li');
         li.textContent = todo;
-        var editButton = document.createElement('button');
+
+        const buttonContainer = document.createElement('div');
+        buttonContainer.style.display = 'flex';
+
+        const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
-        editButton.addEventListener('click', function () { return editTodo(index); });
+        editButton.addEventListener('click', () => editTodo(index));
         editButton.style.backgroundColor = 'green';
-        var deleteButton = document.createElement('button');
+
+        const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.addEventListener('click', function () { return removeTodo(index); });
+        deleteButton.addEventListener('click', () => removeTodo(index));
         deleteButton.style.backgroundColor = 'red';
         deleteButton.style.color = '#fff';
-        li.appendChild(editButton);
-        li.appendChild(deleteButton);
+
+        buttonContainer.appendChild(editButton);
+        buttonContainer.appendChild(deleteButton);
+
+        li.appendChild(buttonContainer);
         todoList.appendChild(li);
     });
 }

@@ -3,6 +3,9 @@ input{
     width: 40vw;
     margin-right: 5px;
 }
+h1{
+    text-align: center;
+}
 button{
     height: 30px;
     width: 100px;
@@ -19,15 +22,26 @@ body{
 .content{
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.content .int{
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 ul{
     list-style-type: circle;
 }
-li{
+li {
     margin-top: 20px;
     font-size: 23px;
     display: flex;
-    width: 30vw;
     justify-content: space-between;
+}
+
+li button {
+    height: 30px;
+    width: 70px; 
 }
